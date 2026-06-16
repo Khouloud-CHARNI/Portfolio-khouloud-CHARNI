@@ -54,7 +54,7 @@ function AccessibilityTools() {
 
   function speakSite() {
     if (!window.speechSynthesis) return alert("La lecture sonore n'est pas disponible dans ce navigateur.")
-    const text = "je t'aime Bertrand Bienvenue sur le portfolio de Khouloud CHARNI. AESH depuis septembre 2024, en reconversion professionnelle vers le développement web et web mobile, admise à 2i Academy Lyon pour un RNCP 5. Ceci est mon tout premier portfolio pour vous montrer mes compétences informatiques"
+    const text = "Bienvenue sur le portfolio de Khouloud CHARNI. AESH depuis septembre 2024, en reconversion professionnelle vers le développement web et web mobile, admise à 2i Academy Lyon pour un RNCP 5. Ceci est son tout premier portfolio pour vous montrer ses compétences informatiques et elle espère trouver une entreprise pour son alternance qui débute en Septembre 2026"
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(new SpeechSynthesisUtterance(text))
   }
@@ -77,7 +77,7 @@ function AccessibilityTools() {
         <p>Partout en France</p>
         <div className="miniTags">
           <span>À partir de septembre</span>
-          <span>Temps plein</span>
+          <span>3 semaines Entreprise / 1 semaine école</span>
         </div>
       </section>
 
@@ -143,7 +143,7 @@ function Hero() {
         <div className="laptop"><span>&lt;/&gt;</span></div>
         <div className="mug">FOCUS<br/>SOURIRE<br/>CONFIANCE</div>
         <motion.div className="thought" initial={{scale:.8, opacity:0}} animate={{scale:1, opacity:1}} transition={{duration:.7}}>
-          Ma pensée du jour :<br />je t'aime Habibii Baz ♡
+          Ma pensée du jour :<br /> Je suis fière d'être autodidacte et vous ? Quel est votre fierté du moment ?
         </motion.div>
       </div>
     </section>
@@ -290,7 +290,7 @@ function Footer() {
     <footer>
       <div className="languages">
         <strong>NOTIONS :</strong> 🇫🇷 Français &nbsp; 🇬🇧 English &nbsp; العربية &nbsp; 🇩🇪 Deutsch<br/>
-        <span>Inclus : Approche, contenu, structure, LSF et Braille</span>
+        <span>Japonais, Mandarin, LSF et Braille</span>
       </div>
       <p>Plus qu'un métier, une vocation. ♡<br/>Construire un monde digital plus inclusif, humain et inspirant. ☆</p>
       <small>© Eikyûu – Portfolio de Khouloud CHARNI – 2026</small>
