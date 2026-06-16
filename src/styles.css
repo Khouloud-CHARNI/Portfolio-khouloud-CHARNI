@@ -46,114 +46,20 @@ button{cursor:pointer}
   white-space:nowrap;
 }
 .home{max-width:1800px;margin:auto;padding:0}
+
+/* FOND D'ÉCRAN RÉTABLI */
 .heroOnly{
   position:relative;
   min-height:720px;
   overflow:hidden;
-  background:#050713;
+  background:
+    linear-gradient(90deg,#02040d55,#02040d22),
+    url("/assets/fond-portfolio-personnage-ville.png") center center / cover no-repeat;
   border-bottom:1px solid var(--line);
 }
-.city{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(180deg,#08051f55 0%,#050713 100%),
-    radial-gradient(circle at 67% 42%,#ff4fc340,transparent 22%),
-    linear-gradient(180deg,#170b34,#070717 58%,#02040d);
-}
-.city::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,transparent 0 7%,#0a0f26 7% 9%,transparent 9% 90%,#0a0f26 90% 92%,transparent 92%),
-    repeating-linear-gradient(90deg,transparent 0 44px,#ff4fc320 45px 48px);
-}
-.city::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:120px;
-  height:210px;
-  background:
-    linear-gradient(to top,#060819 0 72%,transparent 72%),
-    repeating-linear-gradient(90deg,#050817 0 42px,#101a3f 43px 45px,#050817 46px 80px),
-    radial-gradient(circle at 72% 15%,#b84dff 0 3px,transparent 4px);
-  box-shadow:0 -70px 120px #8d2cff55;
-  opacity:.95;
-}
-.developerGirl{
-  position:absolute;
-  left:13%;
-  bottom:40px;
-  width:390px;
-  height:560px;
-  z-index:2;
-}
-.hair{
-  position:absolute;
-  left:170px;
-  top:0;
-  width:145px;
-  height:145px;
-  background:#2b120b;
-  border-radius:50%;
-  box-shadow:0 0 0 12px #6b2918, -35px 20px 0 5px #1a0906;
-}
-.face{
-  position:absolute;
-  left:245px;
-  top:130px;
-  width:78px;
-  height:100px;
-  background:#ba744f;
-  border-radius:50%;
-}
-.hoodie{
-  position:absolute;
-  bottom:0;
-  width:330px;
-  height:420px;
-  background:#060914;
-  border:2px solid #301748;
-  border-radius:120px 120px 34px 34px;
-  color:var(--pink);
-  font-family:cursive;
-  font-size:2.25rem;
-  padding:170px 0 0 75px;
-}
-.laptop{
-  position:absolute;
-  left:49%;
-  bottom:170px;
-  width:320px;
-  height:180px;
-  background:#02050b;
-  border:2px solid #4a5578;
-  border-radius:12px;
-  display:grid;
-  place-items:center;
-  color:var(--pink);
-  font-size:3rem;
-  z-index:3;
-  box-shadow:0 25px 60px #000;
-}
-.cup{
-  position:absolute;
-  left:70%;
-  bottom:92px;
-  width:86px;
-  height:132px;
-  border:2px solid var(--pink);
-  border-radius:0 0 18px 18px;
-  text-align:center;
-  font-size:.75rem;
-  display:grid;
-  place-items:center;
-  z-index:3;
-  background:#050713dd;
-}
+.city,.developerGirl,.laptop,.cup{display:none}
+
+/* Chopper / fan kpop conservé */
 .kpopMascot{
   position:absolute;
   right:95px;
@@ -193,10 +99,12 @@ button{cursor:pointer}
   bottom:18px;
   font-size:1.5rem;
 }
+
+/* BULLE MODIFIABLE PAR-DESSUS */
 .thoughtCloud{
   position:absolute;
-  top:80px;
-  left:45%;
+  top:82px;
+  left:7%;
   width:455px;
   min-height:230px;
   background:#160821e8;
@@ -209,7 +117,7 @@ button{cursor:pointer}
   color:#ff9ee9;
   font-weight:700;
   line-height:1.55;
-  z-index:5;
+  z-index:20;
 }
 .thoughtCloud::before,.thoughtCloud::after{
   content:"";
@@ -219,9 +127,11 @@ button{cursor:pointer}
   border-radius:50%;
   box-shadow:0 0 22px #ff4fc3;
 }
-.thoughtCloud::before{width:42px;height:42px;left:-52px;bottom:52px}
-.thoughtCloud::after{width:22px;height:22px;left:-86px;bottom:32px}
+.thoughtCloud::before{width:42px;height:42px;right:-52px;bottom:52px}
+.thoughtCloud::after{width:22px;height:22px;right:-86px;bottom:32px}
 .thoughtCloud span{font-size:1.6rem}
+
+/* LOGO HANDICAP FLOTTANT */
 .floatingAccessBtn{
   position:fixed;
   right:22px;
@@ -238,6 +148,8 @@ button{cursor:pointer}
   font-size:2rem;
   box-shadow:0 0 22px #ff55cd;
 }
+
+/* PANNEAU ACCESSIBILITÉ : ne cache plus la bulle */
 .accessBox{
   position:fixed;
   right:22px;
@@ -267,6 +179,7 @@ button{cursor:pointer}
 }
 .accessBox svg{color:var(--cyan);font-size:1.4rem}
 .accessBox small{display:block;color:#cfc4df;font-size:.75rem}
+
 .languageLine{
   display:flex;
   gap:18px;
@@ -372,46 +285,26 @@ button{cursor:pointer}
 [dir="rtl"] .accessBox button,[dir="rtl"] .accessBox a{text-align:right}
 [dir="rtl"] .floatingAccessBtn{left:22px;right:auto}
 [dir="rtl"] .accessBox{left:22px;right:auto}
+
 @media(max-width:900px){
   .nav{flex-wrap:wrap}
   .nav nav{order:3;width:100%;font-size:.9rem}
-  .heroOnly{min-height:760px}
-  .developerGirl{
-    left:3%;
-    bottom:12px;
-    transform:scale(.58);
-    transform-origin:bottom left;
-  }
-  .laptop{
-    left:43%;
-    bottom:115px;
-    width:170px;
-    height:110px;
-    font-size:2rem;
-  }
-  .cup{
-    left:74%;
-    bottom:70px;
-    width:62px;
-    height:100px;
-    font-size:.6rem;
-  }
-  .kpopMascot{
-    right:14px;
-    bottom:155px;
-    transform:scale(.7);
-    transform-origin:bottom right;
+  .heroOnly{
+    min-height:760px;
+    background-size:auto 760px;
+    background-position:center top;
   }
   .thoughtCloud{
-    left:12px;
-    top:235px;
+    left:14px;
+    top:250px;
     width:285px;
     min-height:185px;
     font-size:.88rem;
     padding:34px 18px;
+    z-index:20;
   }
-  .thoughtCloud::before{width:28px;height:28px;left:-33px;bottom:42px}
-  .thoughtCloud::after{width:14px;height:14px;left:-56px;bottom:28px}
+  .thoughtCloud::before{width:28px;height:28px;right:-35px;bottom:42px}
+  .thoughtCloud::after{width:14px;height:14px;right:-58px;bottom:28px}
   .floatingAccessBtn{
     right:14px;
     top:128px;
@@ -421,9 +314,22 @@ button{cursor:pointer}
   }
   .accessBox{
     right:10px;
+    left:auto;
     top:192px;
-    width:290px;
-    padding:14px;
+    width:260px;
+    padding:13px;
+    z-index:79;
+  }
+  .accessBox h2{font-size:1.15rem}
+  .accessBox button,.accessBox a{
+    padding:8px;
+    font-size:.82rem;
+  }
+  .kpopMascot{
+    right:12px;
+    bottom:145px;
+    transform:scale(.65);
+    transform-origin:bottom right;
   }
   .skillsGrid{grid-template-columns:1fr}
 }
