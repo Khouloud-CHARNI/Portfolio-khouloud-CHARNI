@@ -54,7 +54,7 @@ function AccessibilityTools() {
 
   function speakSite() {
     if (!window.speechSynthesis) return alert("La lecture sonore n'est pas disponible dans ce navigateur.")
-    const text = "Bienvenue sur le portfolio de Khouloud CHARNI. AESH depuis septembre 2024, en reconversion professionnelle vers le développement web et web mobile, admise à 2i Academy Lyon pour un RNCP 5."
+    const text = "je t'aime Bertrand Bienvenue sur le portfolio de Khouloud CHARNI. AESH depuis septembre 2024, en reconversion professionnelle vers le développement web et web mobile, admise à 2i Academy Lyon pour un RNCP 5. Ceci est mon tout premier portfolio pour vous montrer mes compétences informatiques"
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(new SpeechSynthesisUtterance(text))
   }
