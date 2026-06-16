@@ -5,74 +5,29 @@ body{margin:0;background:#02040d;color:white;font-family:Segoe UI,Arial,sans-ser
 body.contrast{filter:contrast(1.2) brightness(1.1)}
 button,a{font:inherit;color:inherit}
 button{cursor:pointer}
-.visualHome{position:relative;width:100%;max-width:1536px;margin:auto;background:#02040d}
-.heroBg{display:block;width:100%;height:auto}
-.hotNav{position:absolute;top:2.1%;left:15.5%;right:22%;height:5%;display:grid;grid-template-columns:repeat(8,1fr);gap:.5%}
-.hotNav button,.hotCv{border:0;background:transparent}
-.hotCv{position:absolute;top:1.6%;right:3%;width:13%;height:5.5%;display:block}
-.editableThought{
-  position:absolute;
-  top:22.8%;
-  left:40.2%;
-  width:23.3%;
-  min-height:17.5%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#ff9ee9;
-  font-weight:800;
-  font-size:clamp(.72rem,1.36vw,1.32rem);
-  line-height:1.25;
-  text-shadow:0 0 8px #ff55cd;
-  pointer-events:none;
-}
+.navBar{position:sticky;top:0;z-index:50;min-height:74px;background:#050713f7;border-bottom:1px solid #25152f;display:flex;align-items:center;gap:22px;padding:10px 24px}
+.logoBtn{border:0;background:transparent;padding:0}
+.logoBtn img{width:96px;height:46px;object-fit:contain;background:white}
+.navBar nav{display:flex;gap:28px;align-items:center;flex:1;overflow:auto;white-space:nowrap}
+.navBar nav button{border:0;background:transparent}
+.cvBtn{background:linear-gradient(90deg,var(--pink),var(--purple));border-radius:999px;padding:12px 20px;text-decoration:none;font-weight:700;white-space:nowrap}
+.hero{position:relative;min-height:min(640px,62vw);background:url("/assets/fond-personnage-ville-chopper.png") center center / cover no-repeat;overflow:hidden}
+.thoughtLabel{position:absolute;top:8%;left:42%;transform:translateX(-50%);font-family:cursive;font-size:clamp(2rem,4vw,4.3rem);color:#ffc1f1;text-shadow:0 0 16px #ff55cd;z-index:3}
+.editableThought{position:absolute;top:24%;left:39%;transform:translateX(-50%);width:31%;min-height:24%;border:4px solid #ff75dc;border-radius:50%;background:#160821d9;box-shadow:0 0 30px #ff4fc3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#ffb0ef;text-shadow:0 0 8px #ff55cd;font-weight:800;font-size:clamp(.9rem,1.65vw,1.9rem);line-height:1.18;padding:2.2rem;z-index:4}
+.editableThought::before,.editableThought::after{content:"";position:absolute;background:#160821d9;border:4px solid #ff75dc;border-radius:50%;box-shadow:0 0 20px #ff4fc3}
+.editableThought::before{width:48px;height:48px;left:-64px;bottom:62px}
+.editableThought::after{width:24px;height:24px;left:-105px;bottom:42px}
 .editableThought p{margin:.22em 0}
 .editableThought b{font-size:1.4em}
-.accessFloating{
-  position:absolute;
-  top:13.2%;
-  right:6.4%;
-  width:4.9%;
-  aspect-ratio:1/1;
-  border-radius:50%;
-  border:2px solid #ff8be6;
-  background:linear-gradient(135deg,var(--purple),var(--pink));
-  color:#fff;
-  font-size:clamp(1rem,2.5vw,2rem);
-  display:grid;
-  place-items:center;
-  box-shadow:0 0 20px #ff55cd;
-  z-index:20;
-}
-.accessPanel{
-  position:absolute;
-  top:20%;
-  right:3%;
-  width:19%;
-  background:linear-gradient(180deg,#0b1024f5,#050817f5);
-  border:1px solid #5b4b77;
-  border-radius:18px;
-  padding:1.1%;
-  z-index:21;
-  box-shadow:0 20px 60px #000a;
-}
-.accessPanel button,.accessPanel a{
-  width:100%;
-  display:flex;
-  align-items:center;
-  gap:.8em;
-  padding:.85em;
-  margin:.45em 0;
-  border-radius:12px;
-  border:1px solid #273250;
-  background:#081329;
-  text-decoration:none;
-}
-.accessPanel span:first-child{color:var(--cyan);font-weight:bold}
-.langHotspots{position:absolute;left:10%;bottom:8.4%;width:22%;height:4%;display:grid;grid-template-columns:repeat(3,1fr);gap:8%}
-.langHotspots button{border:0;background:transparent;text-indent:-999px}
+.accessFloating{position:fixed;right:22px;top:130px;width:64px;height:64px;border-radius:50%;border:2px solid #ff8be6;background:linear-gradient(135deg,var(--purple),var(--pink));color:white;font-size:2rem;display:grid;place-items:center;box-shadow:0 0 20px #ff55cd;z-index:80}
+.accessPanel{position:fixed;right:22px;top:205px;width:310px;background:linear-gradient(180deg,#0b1024f5,#050817f5);border:1px solid #5b4b77;border-radius:18px;padding:18px;z-index:79;box-shadow:0 20px 60px #000a}
+.accessPanel h2{color:var(--pink);margin-top:0}
+.accessPanel button,.accessPanel a{width:100%;display:flex;align-items:center;gap:.8em;padding:.85em;margin:.45em 0;border-radius:12px;border:1px solid #273250;background:#081329;text-decoration:none}
+.accessPanel svg{color:var(--cyan)}
+.accessPanel small{display:block;font-size:.75rem;color:#d7cbe6}
+.poly{display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap;padding:22px;background:#050713;border-bottom:1px solid #25152f}
+.poly button{border:0;background:transparent;text-decoration:underline}
+.inclusion{text-align:center;padding:20px;color:#f2d7ec;background:#050713}
 .overlay{position:fixed;inset:0;background:#0009;z-index:100;display:flex;justify-content:flex-end}
 .slide{width:min(720px,95vw);height:100%;overflow:auto;background:#080b1a;border-left:2px solid var(--pink);padding:30px;box-shadow:-20px 0 60px #000}
 .close{float:right;background:#1a0e28;border:1px solid var(--pink);border-radius:50%;width:40px;height:40px;display:grid;place-items:center}
@@ -86,18 +41,18 @@ button{cursor:pointer}
 .mainBtn,.ghostBtn{border:0;border-radius:12px;padding:12px 20px;margin:10px 10px 10px 0;background:linear-gradient(90deg,var(--pink),var(--purple))}
 .ghostBtn{background:#090817;border:1px solid var(--pink)}
 .results p{display:flex;justify-content:space-between;border-bottom:1px solid #273250;padding:10px}
-.socials{display:flex;gap:12px}
-.socials a{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid #273250;text-decoration:none}
-.coming{text-align:center}
-.coming svg{font-size:4rem;color:var(--pink)}
+.coming{text-align:center}.coming svg{font-size:4rem;color:var(--pink)}
 [dir="rtl"] .overlay{justify-content:flex-start}
 [dir="rtl"] .slide{border-left:0;border-right:2px solid var(--pink)}
 @media(max-width:900px){
-  .visualHome{width:100%;overflow-x:hidden}
-  .heroBg{width:1536px;max-width:none;height:864px;transform:translateX(-470px)}
-  .editableThought{top:205px;left:150px;width:310px;min-height:150px;font-size:1rem}
-  .accessFloating{position:fixed;top:118px;right:15px;width:58px;z-index:50}
-  .accessPanel{position:fixed;top:185px;right:10px;width:280px;padding:12px}
-  .hotNav,.hotCv,.langHotspots{display:none}
+  .navBar{flex-wrap:wrap;padding:10px 14px}
+  .navBar nav{order:3;width:100%;font-size:.9rem}
+  .hero{min-height:640px;background-size:auto 640px;background-position:center top}
+  .thoughtLabel{top:8%;left:52%;font-size:2rem;width:90%;text-align:center}
+  .editableThought{top:19%;left:52%;width:300px;min-height:190px;font-size:1rem;padding:1.7rem}
+  .editableThought::before{width:30px;height:30px;left:-40px;bottom:55px}
+  .editableThought::after{width:16px;height:16px;left:-65px;bottom:36px}
+  .accessFloating{top:120px;right:14px;width:56px;height:56px;font-size:1.7rem}
+  .accessPanel{top:184px;right:10px;width:285px;padding:14px}
   .grid{grid-template-columns:1fr}
 }

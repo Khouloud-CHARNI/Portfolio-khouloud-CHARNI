@@ -2,7 +2,8 @@ import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   FaTimes, FaDownload, FaCode, FaBriefcase, FaGraduationCap, FaUsers, FaHeart,
-  FaWhatsapp, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaRocket, FaVolumeUp
+  FaWhatsapp, FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaRocket, FaVolumeUp,
+  FaWheelchair, FaHandPaper, FaBraille, FaAdjust, FaUniversalAccess
 } from "react-icons/fa";
 import "./styles.css";
 
@@ -21,7 +22,12 @@ const T = {
   fr: {
     dir: "ltr",
     nav: ["Accueil", "À propos", "Compétences", "Parcours", "Bénévolat", "Actualités 2026", "Contact", "Documents"],
+    cv: "Télécharger CV",
+    thoughtTitle: "Ma pensée du jour :",
     thought: ["Je suis fière d'être autodidacte !", "Et vous ?", "Quelle est votre fierté du moment ?"],
+    poly: "Polyglotte :",
+    inclusion: "Chaque personne mérite un accès égal au savoir et à la technologie. Construisons ensemble un avenir inclusif. 💜",
+    access: "Accessibilité",
     aboutTitle: "À propos de moi",
     aboutText: [
       "AESH actuellement, je suis en reconversion professionnelle vers le développement web et web mobile.",
@@ -51,7 +57,12 @@ const T = {
   en: {
     dir: "ltr",
     nav: ["Home", "About", "Skills", "Journey", "Volunteering", "2026 News", "Contact", "Documents"],
+    cv: "Download CV",
+    thoughtTitle: "Thought of the day:",
     thought: ["I am proud to be self-taught!", "And you?", "What are you proud of right now?"],
+    poly: "Polyglot:",
+    inclusion: "Everyone deserves equal access to knowledge and technology. Let us build a more inclusive future together. 💜",
+    access: "Accessibility",
     aboutTitle: "About me",
     aboutText: [
       "I currently work as an AESH, supporting pupils with disabilities, and I am changing careers toward web and mobile development.",
@@ -81,7 +92,12 @@ const T = {
   ar: {
     dir: "rtl",
     nav: ["الرئيسية", "من أنا", "المهارات", "المسار", "التطوع", "أخبار 2026", "التواصل", "الوثائق"],
+    cv: "تحميل السيرة الذاتية",
+    thoughtTitle: "فكرة اليوم:",
     thought: ["أنا فخورة بكوني تعلمت بنفسي!", "وأنتم؟", "ما هو الشيء الذي تفتخرون به الآن؟"],
+    poly: "متعددة اللغات:",
+    inclusion: "كل شخص يستحق وصولاً متساوياً إلى المعرفة والتكنولوجيا. لنبنِ معاً مستقبلاً أكثر شمولاً. 💜",
+    access: "إمكانية الوصول",
     aboutTitle: "من أنا",
     aboutText: [
       "أعمل حالياً كمرافقة مدرسية للتلاميذ في وضعية إعاقة، وأنا في مرحلة إعادة توجيه مهني نحو تطوير الويب وتطبيقات الهاتف.",
@@ -117,6 +133,7 @@ function App() {
   const [accessOpen, setAccessOpen] = useState(false);
   const [vote, setVote] = useState("");
   const [showResults, setShowResults] = useState(false);
+  const braille = useMemo(() => "⠏⠕⠗⠞⠋⠕⠇⠊⠕ ⠁⠉⠉⠑⠎⠎⠊⠃⠇⠑", []);
 
   const openLang = (target) => window.open(`${window.location.origin}${window.location.pathname}?lang=${target}`, "_blank", "noopener,noreferrer");
 
@@ -130,44 +147,53 @@ function App() {
 
   return (
     <div className="site" dir={t.dir}>
-      <main className="visualHome">
-        <img className="heroBg" src="/assets/hero-identique.png" alt="Portfolio visuel Khouloud CHARNI" />
-
-        <nav className="hotNav" aria-label="Navigation">
-          <button onClick={() => setSlide(null)}></button>
-          <button onClick={() => setSlide("about")}></button>
-          <button onClick={() => setSlide("skills")}></button>
-          <button onClick={() => setSlide("journey")}></button>
-          <button onClick={() => setSlide("volunteer")}></button>
-          <button onClick={() => setSlide("news")}></button>
-          <button onClick={() => setSlide("contact")}></button>
-          <button onClick={() => setSlide("docs")}></button>
+      <header className="navBar">
+        <button className="logoBtn" onClick={() => setSlide(null)}><img src="/assets/logo-eikyuu.png" alt="Eikyûu" /></button>
+        <nav>
+          <button onClick={() => setSlide(null)}>{t.nav[0]}</button>
+          <button onClick={() => setSlide("about")}>{t.nav[1]}</button>
+          <button onClick={() => setSlide("skills")}>{t.nav[2]}</button>
+          <button onClick={() => setSlide("journey")}>{t.nav[3]}</button>
+          <button onClick={() => setSlide("volunteer")}>{t.nav[4]}</button>
+          <button onClick={() => setSlide("news")}>{t.nav[5]}</button>
+          <button onClick={() => setSlide("contact")}>{t.nav[6]}</button>
+          <button onClick={() => setSlide("docs")}>{t.nav[7]}</button>
         </nav>
+        <a className="cvBtn" href="/documents/CV-Khouloud-CHARNI-Alternance.pdf" download><FaDownload /> {t.cv}</a>
+      </header>
 
-        <a className="hotCv" href="/documents/CV-Khouloud-CHARNI-Alternance.pdf" download aria-label="Télécharger CV"></a>
+      <main>
+        <section className="hero">
+          <div className="thoughtLabel">{t.thoughtTitle}</div>
+          <div className="editableThought">
+            {t.thought.map((line) => <p key={line}>{line}</p>)}
+            <b>♡</b>
+          </div>
 
-        <div className="editableThought" aria-label="Pensée du jour modifiable">
-          {t.thought.map((line) => <p key={line}>{line}</p>)}
-          <b>♡</b>
-        </div>
+          <button className="accessFloating" onClick={() => setAccessOpen(!accessOpen)} aria-label={t.access}>
+            <FaWheelchair />
+          </button>
 
-        <button className="accessFloating" onClick={() => setAccessOpen(!accessOpen)} aria-label="Accessibilités">♿</button>
+          {accessOpen && (
+            <section className="accessPanel">
+              <h2>{t.access}</h2>
+              <button onClick={() => speak()}><FaVolumeUp /> Sonore</button>
+              <a href="https://dico.elix-lsf.fr/" target="_blank" rel="noreferrer"><FaHandPaper /> LSF</a>
+              <button><FaBraille /> Braille <small>{braille}</small></button>
+              <button onClick={() => document.body.classList.toggle("contrast")}><FaAdjust /> Contrastes élevés</button>
+              <button onClick={() => document.documentElement.classList.toggle("largeText")}><FaUniversalAccess /> Texte +</button>
+            </section>
+          )}
+        </section>
 
-        {accessOpen && (
-          <section className="accessPanel">
-            <button onClick={() => speak()}><span>🔊</span> Sonore</button>
-            <a href="https://dico.elix-lsf.fr/" target="_blank" rel="noreferrer"><span>🤚</span> LSF</a>
-            <button><span>⠿</span> Braille</button>
-            <button onClick={() => document.body.classList.toggle("contrast")}><span>◐</span> Contrastes élevés</button>
-            <button onClick={() => document.documentElement.classList.toggle("largeText")}><span>T</span> Texte +</button>
-          </section>
-        )}
+        <section className="poly">
+          <strong>{t.poly}</strong>
+          <button onClick={() => openLang("fr")}>🇫🇷 Français</button>
+          <button onClick={() => openLang("en")}>🇬🇧 English</button>
+          <button onClick={() => openLang("ar")}>🇸🇦 العربية</button>
+        </section>
 
-        <div className="langHotspots">
-          <button onClick={() => openLang("fr")}>Français</button>
-          <button onClick={() => openLang("en")}>English</button>
-          <button onClick={() => openLang("ar")}>العربية</button>
-        </div>
+        <section className="inclusion">{t.inclusion}</section>
       </main>
 
       {slide && (
@@ -192,12 +218,6 @@ function Slide({ name, t, vote, setVote, showResults, setShowResults }) {
       <img className="photo" src="/assets/photo-khouloud-originale.jpg" alt="Khouloud CHARNI" />
       {t.aboutText.map((p) => <p key={p}>{p}</p>)}
       <ul><li>AESH depuis septembre 2024</li><li>Bac Littéraire</li><li>Bac Pro ARCU</li><li>2i Academy Lyon – RNCP 5</li></ul>
-      <div className="socials">
-        <a href={contacts.linkedin}><FaLinkedin /></a>
-        <a href={contacts.github}><FaGithub /></a>
-        <a href={`mailto:${contacts.email}`}><FaEnvelope /></a>
-        <a href={contacts.whatsapp}><FaWhatsapp /></a>
-      </div>
     </>
   );
   if (name === "skills") return (
