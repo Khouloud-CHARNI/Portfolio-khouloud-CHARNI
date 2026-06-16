@@ -1,0 +1,1 @@
+Remplace le dossier src de ton projet par ce dossier src. Puis lance : npm run build, git add ., git commit -m "Patch design", git push origin main.
