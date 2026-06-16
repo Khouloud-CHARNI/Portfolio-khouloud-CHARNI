@@ -1,5 +1,5 @@
 *{box-sizing:border-box}
-:root{--pink:#ff55cd;--purple:#9b43ff;--cyan:#00ead1;--panel:#071022;--line:#3d2454}
+:root{--pink:#ff55cd;--purple:#9b43ff;--cyan:#00ead1;--line:#3d2454}
 html.largeText{font-size:18px}
 body{margin:0;background:#02040d;color:white;font-family:Segoe UI,Arial,sans-serif}
 body.contrast{filter:contrast(1.2) brightness(1.1)}
@@ -11,14 +11,11 @@ button{cursor:pointer}
 .navBar nav{display:flex;gap:28px;align-items:center;flex:1;overflow:auto;white-space:nowrap}
 .navBar nav button{border:0;background:transparent}
 .cvBtn{background:linear-gradient(90deg,var(--pink),var(--purple));border-radius:999px;padding:12px 20px;text-decoration:none;font-weight:700;white-space:nowrap}
-.hero{position:relative;min-height:min(640px,62vw);background:url("/assets/fond-personnage-ville-chopper.png") center center / cover no-repeat;overflow:hidden}
-.thoughtLabel{position:absolute;top:8%;left:42%;transform:translateX(-50%);font-family:cursive;font-size:clamp(2rem,4vw,4.3rem);color:#ffc1f1;text-shadow:0 0 16px #ff55cd;z-index:3}
-.editableThought{position:absolute;top:24%;left:39%;transform:translateX(-50%);width:31%;min-height:24%;border:4px solid #ff75dc;border-radius:50%;background:#160821d9;box-shadow:0 0 30px #ff4fc3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#ffb0ef;text-shadow:0 0 8px #ff55cd;font-weight:800;font-size:clamp(.9rem,1.65vw,1.9rem);line-height:1.18;padding:2.2rem;z-index:4}
-.editableThought::before,.editableThought::after{content:"";position:absolute;background:#160821d9;border:4px solid #ff75dc;border-radius:50%;box-shadow:0 0 20px #ff4fc3}
-.editableThought::before{width:48px;height:48px;left:-64px;bottom:62px}
-.editableThought::after{width:24px;height:24px;left:-105px;bottom:42px}
-.editableThought p{margin:.22em 0}
-.editableThought b{font-size:1.4em}
+.hero{position:relative;min-height:min(640px,62vw);background:linear-gradient(90deg,#02040d22,#02040d00),url("/assets/fond-personnage-ville-chopper.png") center center / cover no-repeat;overflow:hidden}
+.thoughtTitle{position:absolute;top:6.2%;left:54%;transform:translateX(-50%);width:34%;text-align:center;font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(1.55rem,3.2vw,3.4rem);color:#ffc1f1;text-shadow:0 0 14px #ff55cd;z-index:3}
+.thoughtBubble{position:absolute;top:18.2%;left:54%;transform:translateX(-50%);width:30%;min-height:24%;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#ffb0ef;text-shadow:0 0 8px #ff55cd;font-weight:800;font-size:clamp(.76rem,1.35vw,1.55rem);line-height:1.18;padding:1.4rem;z-index:4;pointer-events:none}
+.thoughtBubble p{margin:.22em 0}
+.thoughtBubble b{font-size:1.4em}
 .accessFloating{position:fixed;right:22px;top:130px;width:64px;height:64px;border-radius:50%;border:2px solid #ff8be6;background:linear-gradient(135deg,var(--purple),var(--pink));color:white;font-size:2rem;display:grid;place-items:center;box-shadow:0 0 20px #ff55cd;z-index:80}
 .accessPanel{position:fixed;right:22px;top:205px;width:310px;background:linear-gradient(180deg,#0b1024f5,#050817f5);border:1px solid #5b4b77;border-radius:18px;padding:18px;z-index:79;box-shadow:0 20px 60px #000a}
 .accessPanel h2{color:var(--pink);margin-top:0}
@@ -48,10 +45,8 @@ button{cursor:pointer}
   .navBar{flex-wrap:wrap;padding:10px 14px}
   .navBar nav{order:3;width:100%;font-size:.9rem}
   .hero{min-height:640px;background-size:auto 640px;background-position:center top}
-  .thoughtLabel{top:8%;left:52%;font-size:2rem;width:90%;text-align:center}
-  .editableThought{top:19%;left:52%;width:300px;min-height:190px;font-size:1rem;padding:1.7rem}
-  .editableThought::before{width:30px;height:30px;left:-40px;bottom:55px}
-  .editableThought::after{width:16px;height:16px;left:-65px;bottom:36px}
+  .thoughtTitle{top:7%;left:55%;width:300px;font-size:1.7rem}
+  .thoughtBubble{top:17%;left:55%;width:255px;min-height:155px;font-size:.82rem;padding:1rem}
   .accessFloating{top:120px;right:14px;width:56px;height:56px;font-size:1.7rem}
   .accessPanel{top:184px;right:10px;width:285px;padding:14px}
   .grid{grid-template-columns:1fr}

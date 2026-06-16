@@ -26,14 +26,10 @@ const T = {
     thoughtTitle: "Ma pensée du jour :",
     thought: ["Je suis fière d'être autodidacte !", "Et vous ?", "Quelle est votre fierté du moment ?"],
     poly: "Polyglotte :",
-    inclusion: "Chaque personne mérite un accès égal au savoir et à la technologie. Construisons ensemble un avenir inclusif. 💜",
+    inclusion: "Chaque personne mérite un accès égal au savoir et à la technologie. Construisons ensemble un avenir inclusif.",
     access: "Accessibilité",
     aboutTitle: "À propos de moi",
-    aboutText: [
-      "AESH actuellement, je suis en reconversion professionnelle vers le développement web et web mobile.",
-      "Curieuse, rigoureuse et déterminée, mon objectif est de transformer ma passion pour le numérique en un métier porteur de sens et d'innovation.",
-      "Je suis admise à 2i Academy à Lyon pour un titre RNCP 5 Développeuse Web et Web Mobile, et je recherche une alternance d'une durée d'un an à partir de septembre."
-    ],
+    aboutText: ["AESH actuellement, je suis en reconversion professionnelle vers le développement web et web mobile.","Curieuse, rigoureuse et déterminée, mon objectif est de transformer ma passion pour le numérique en un métier porteur de sens et d'innovation.","Je suis admise à 2i Academy à Lyon pour un titre RNCP 5 Développeuse Web et Web Mobile, et je recherche une alternance d'une durée d'un an à partir de septembre."],
     skillsTitle: "Compétences",
     skillsLevel: "Niveau : Débutante – en apprentissage continu",
     skillsIntro: "Je suis novice, en reconversion professionnelle, mais je sais utiliser et pratiquer :",
@@ -61,14 +57,10 @@ const T = {
     thoughtTitle: "Thought of the day:",
     thought: ["I am proud to be self-taught!", "And you?", "What are you proud of right now?"],
     poly: "Polyglot:",
-    inclusion: "Everyone deserves equal access to knowledge and technology. Let us build a more inclusive future together. 💜",
+    inclusion: "Everyone deserves equal access to knowledge and technology. Let us build a more inclusive future together.",
     access: "Accessibility",
     aboutTitle: "About me",
-    aboutText: [
-      "I currently work as an AESH, supporting pupils with disabilities, and I am changing careers toward web and mobile development.",
-      "Curious, rigorous and determined, my goal is to turn my passion for digital technology into a meaningful and innovative career.",
-      "I have been admitted to 2i Academy in Lyon for an RNCP Level 5 Web and Mobile Developer program, and I am looking for a one-year work-study position starting in September."
-    ],
+    aboutText: ["I currently work as an AESH, supporting pupils with disabilities, and I am changing careers toward web and mobile development.","Curious, rigorous and determined, my goal is to turn my passion for digital technology into a meaningful and innovative career.","I have been admitted to 2i Academy in Lyon for an RNCP Level 5 Web and Mobile Developer program, and I am looking for a one-year work-study position starting in September."],
     skillsTitle: "Skills",
     skillsLevel: "Level: Beginner – continuously learning",
     skillsIntro: "I am a beginner, currently changing careers, but I can use and practice:",
@@ -96,14 +88,10 @@ const T = {
     thoughtTitle: "فكرة اليوم:",
     thought: ["أنا فخورة بكوني تعلمت بنفسي!", "وأنتم؟", "ما هو الشيء الذي تفتخرون به الآن؟"],
     poly: "متعددة اللغات:",
-    inclusion: "كل شخص يستحق وصولاً متساوياً إلى المعرفة والتكنولوجيا. لنبنِ معاً مستقبلاً أكثر شمولاً. 💜",
+    inclusion: "كل شخص يستحق وصولاً متساوياً إلى المعرفة والتكنولوجيا. لنبنِ معاً مستقبلاً أكثر شمولاً.",
     access: "إمكانية الوصول",
     aboutTitle: "من أنا",
-    aboutText: [
-      "أعمل حالياً كمرافقة مدرسية للتلاميذ في وضعية إعاقة، وأنا في مرحلة إعادة توجيه مهني نحو تطوير الويب وتطبيقات الهاتف.",
-      "أنا فضولية، دقيقة ومصممة، وهدفي أن أحوّل شغفي بالتقنية الرقمية إلى مهنة ذات معنى وابتكار.",
-      "تم قبولي في أكاديمية 2i في ليون للحصول على شهادة RNCP مستوى 5 كمطورة ويب وموبايل، وأبحث عن تدريب مهني لمدة سنة ابتداءً من سبتمبر."
-    ],
+    aboutText: ["أعمل حالياً كمرافقة مدرسية للتلاميذ في وضعية إعاقة، وأنا في مرحلة إعادة توجيه مهني نحو تطوير الويب وتطبيقات الهاتف.","أنا فضولية، دقيقة ومصممة، وهدفي أن أحوّل شغفي بالتقنية الرقمية إلى مهنة ذات معنى وابتكار.","تم قبولي في أكاديمية 2i في ليون للحصول على شهادة RNCP مستوى 5 كمطورة ويب وموبايل، وأبحث عن تدريب مهني لمدة سنة ابتداءً من سبتمبر."],
     skillsTitle: "المهارات",
     skillsLevel: "المستوى: مبتدئة – في تعلم مستمر",
     skillsIntro: "أنا مبتدئة وفي إعادة توجيه مهني، لكنني أعرف استخدام وممارسة:",
@@ -148,24 +136,25 @@ function App() {
   return (
     <div className="site" dir={t.dir}>
       <header className="navBar">
-        <button className="logoBtn" onClick={() => setSlide(null)}><img src="/assets/logo-eikyuu.png" alt="Eikyûu" /></button>
+        <button className="logoBtn" onClick={() => setSlide(null)}>
+          <img src="/assets/logo-eikyuu.png" alt="Eikyûu" />
+        </button>
         <nav>
-          <button onClick={() => setSlide(null)}>{t.nav[0]}</button>
-          <button onClick={() => setSlide("about")}>{t.nav[1]}</button>
-          <button onClick={() => setSlide("skills")}>{t.nav[2]}</button>
-          <button onClick={() => setSlide("journey")}>{t.nav[3]}</button>
-          <button onClick={() => setSlide("volunteer")}>{t.nav[4]}</button>
-          <button onClick={() => setSlide("news")}>{t.nav[5]}</button>
-          <button onClick={() => setSlide("contact")}>{t.nav[6]}</button>
-          <button onClick={() => setSlide("docs")}>{t.nav[7]}</button>
+          {t.nav.map((label, i) => (
+            <button key={label} onClick={() => i === 0 ? setSlide(null) : setSlide(["about","skills","journey","volunteer","news","contact","docs"][i-1])}>
+              {label}
+            </button>
+          ))}
         </nav>
-        <a className="cvBtn" href="/documents/CV-Khouloud-CHARNI-Alternance.pdf" download><FaDownload /> {t.cv}</a>
+        <a className="cvBtn" href="/documents/CV-Khouloud-CHARNI-Alternance.pdf" download>
+          <FaDownload /> {t.cv}
+        </a>
       </header>
 
       <main>
         <section className="hero">
-          <div className="thoughtLabel">{t.thoughtTitle}</div>
-          <div className="editableThought">
+          <div className="thoughtTitle">{t.thoughtTitle}</div>
+          <div className="thoughtBubble">
             {t.thought.map((line) => <p key={line}>{line}</p>)}
             <b>♡</b>
           </div>
@@ -200,7 +189,9 @@ function App() {
         <div className="overlay">
           <aside className="slide">
             <button className="close" onClick={() => setSlide(null)}><FaTimes /></button>
-            <button className="readSlide" onClick={() => speak(document.querySelector(".slideContent")?.innerText || t.speak)}><FaVolumeUp /> Audio</button>
+            <button className="readSlide" onClick={() => speak(document.querySelector(".slideContent")?.innerText || t.speak)}>
+              <FaVolumeUp /> Audio
+            </button>
             <div className="slideContent">
               <Slide name={slide} t={t} vote={vote} setVote={setVote} showResults={showResults} setShowResults={setShowResults} />
             </div>
@@ -217,68 +208,23 @@ function Slide({ name, t, vote, setVote, showResults, setShowResults }) {
       <h1>{t.aboutTitle}</h1>
       <img className="photo" src="/assets/photo-khouloud-originale.jpg" alt="Khouloud CHARNI" />
       {t.aboutText.map((p) => <p key={p}>{p}</p>)}
-      <ul><li>AESH depuis septembre 2024</li><li>Bac Littéraire</li><li>Bac Pro ARCU</li><li>2i Academy Lyon – RNCP 5</li></ul>
+      <ul>
+        <li>AESH depuis septembre 2024</li>
+        <li>Bac Littéraire</li>
+        <li>Bac Pro ARCU</li>
+        <li>2i Academy Lyon – RNCP 5</li>
+      </ul>
     </>
   );
-  if (name === "skills") return (
-    <>
-      <h1>{t.skillsTitle}</h1>
-      <h3>{t.skillsLevel}</h3>
-      <p>{t.skillsIntro}</p>
-      <div className="grid">{t.techs.map((x) => <div className="item" key={x}><FaCode /> {x}</div>)}</div>
-    </>
-  );
-  if (name === "journey") return (
-    <>
-      <h1>{t.journeyTitle}</h1>
-      <div className="aesh">👩‍🏫 👦 📘</div>
-      <p><FaBriefcase /> <b>{t.aeshTitle}</b></p>
-      <p>{t.aeshText}</p>
-      <p><FaGraduationCap /> Depuis septembre 2024</p>
-      <p><FaGraduationCap /> Formation à venir – 2i Academy Lyon</p>
-      <p><FaGraduationCap /> RNCP 5 Développeuse Web et Web Mobile</p>
-      <p><FaGraduationCap /> Bac Pro ARCU</p>
-      <p><FaGraduationCap /> Bac Littéraire</p>
-    </>
-  );
-  if (name === "volunteer") return (
-    <>
-      <h1>{t.volunteerTitle}</h1>
-      <div className="item"><FaUsers /> <p><b>Bénévole avec Ensemble pour un Repas</b><br />Aide à la préparation et à la distribution de repas pour les personnes dans le besoin.</p></div>
-      <div className="item"><FaHeart /> <p><b>Donatrice pour Ummanitaire Concept</b><br />Participation à des collectes et dons pour aider les populations en difficulté.</p></div>
-    </>
-  );
+  if (name === "skills") return <><h1>{t.skillsTitle}</h1><h3>{t.skillsLevel}</h3><p>{t.skillsIntro}</p><div className="grid">{t.techs.map((x) => <div className="item" key={x}><FaCode /> {x}</div>)}</div></>;
+  if (name === "journey") return <><h1>{t.journeyTitle}</h1><div className="aesh">👩‍🏫 👦 📘</div><p><FaBriefcase /> <b>{t.aeshTitle}</b></p><p>{t.aeshText}</p><p><FaGraduationCap /> Depuis septembre 2024</p><p><FaGraduationCap /> Formation à venir – 2i Academy Lyon</p><p><FaGraduationCap /> RNCP 5 Développeuse Web et Web Mobile</p><p><FaGraduationCap /> Bac Pro ARCU</p><p><FaGraduationCap /> Bac Littéraire</p></>;
+  if (name === "volunteer") return <><h1>{t.volunteerTitle}</h1><div className="item"><FaUsers /> <p><b>Bénévole avec Ensemble pour un Repas</b><br />Aide à la préparation et à la distribution de repas pour les personnes dans le besoin.</p></div><div className="item"><FaHeart /> <p><b>Donatrice pour Ummanitaire Concept</b><br />Participation à des collectes et dons pour aider les populations en difficulté.</p></div></>;
   if (name === "news") {
     const results = [["France","32%"],["Brésil","20%"],["Argentine","15%"],["Allemagne","12%"],["Portugal","8%"],["Espagne","7%"],["Autre","6%"]];
-    return (
-      <>
-        <h1>{t.newsTitle}</h1>
-        <p>{t.voteQuestion}</p>
-        {t.countries.map((c) => <label className="vote" key={c}><input type="radio" name="vote" checked={vote === c} onChange={() => setVote(c)} /> {c}</label>)}
-        <button className="mainBtn" onClick={() => alert(vote ? `${t.voteBtn} : ${vote}` : "Choisis une équipe.")}>{t.voteBtn}</button>
-        <button className="ghostBtn" onClick={() => setShowResults(true)}>{t.resultsBtn}</button>
-        {showResults && <div className="results">{results.map(([a,b]) => <p key={a}><span>{a}</span><b>{b}</b></p>)}</div>}
-      </>
-    );
+    return <><h1>{t.newsTitle}</h1><p>{t.voteQuestion}</p>{t.countries.map((c) => <label className="vote" key={c}><input type="radio" name="vote" checked={vote === c} onChange={() => setVote(c)} /> {c}</label>)}<button className="mainBtn" onClick={() => alert(vote ? `${t.voteBtn} : ${vote}` : "Choisis une équipe.")}>{t.voteBtn}</button><button className="ghostBtn" onClick={() => setShowResults(true)}>{t.resultsBtn}</button>{showResults && <div className="results">{results.map(([a,b]) => <p key={a}><span>{a}</span><b>{b}</b></p>)}</div>}</>;
   }
-  if (name === "contact") return (
-    <>
-      <h1>{t.contactTitle}</h1>
-      <a className="line" href={contacts.whatsapp}><FaWhatsapp /> WhatsApp</a>
-      <a className="line" href={`tel:+33${contacts.phone.slice(1)}`}><FaPhone /> {contacts.phoneDisplay}</a>
-      <a className="line" href={`mailto:${contacts.email}`}><FaEnvelope /> {contacts.email}</a>
-      <a className="line" href={contacts.linkedin}><FaLinkedin /> LinkedIn</a>
-      <a className="line" href={contacts.github}><FaGithub /> GitHub</a>
-    </>
-  );
-  return (
-    <>
-      <h1>{t.docsTitle}</h1>
-      <a className="line" href="/documents/CV-Khouloud-CHARNI-Alternance.pdf" download><FaDownload /> {t.downloadCv}</a>
-      <a className="line" href="/documents/Lettre-Motivation-Khouloud-CHARNI.pdf" download><FaDownload /> {t.downloadLetter}</a>
-      <div className="coming"><FaRocket /><h2>{t.projectSoon}</h2></div>
-    </>
-  );
+  if (name === "contact") return <><h1>{t.contactTitle}</h1><a className="line" href={contacts.whatsapp}><FaWhatsapp /> WhatsApp</a><a className="line" href={`tel:+33${contacts.phone.slice(1)}`}><FaPhone /> {contacts.phoneDisplay}</a><a className="line" href={`mailto:${contacts.email}`}><FaEnvelope /> {contacts.email}</a><a className="line" href={contacts.linkedin}><FaLinkedin /> LinkedIn</a><a className="line" href={contacts.github}><FaGithub /> GitHub</a></>;
+  return <><h1>{t.docsTitle}</h1><a className="line" href="/documents/CV-Khouloud-CHARNI-Alternance.pdf" download><FaDownload /> {t.downloadCv}</a><a className="line" href="/documents/Lettre-Motivation-Khouloud-CHARNI.pdf" download><FaDownload /> {t.downloadLetter}</a><div className="coming"><FaRocket /><h2>{t.projectSoon}</h2></div></>;
 }
 
 createRoot(document.getElementById("root")).render(<App />);
