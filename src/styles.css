@@ -50,91 +50,15 @@ button{cursor:pointer}
   position:relative;
   min-height:690px;
   overflow:hidden;
-  background:#050713;
+  background:#050713 url("/assets/hero-wallpaper.png") center center / cover no-repeat;
   border-bottom:1px solid var(--line);
 }
-.city{
-  position:absolute;
-  inset:0;
-  background:
-    repeating-linear-gradient(90deg,transparent 0 46px,#ff4fc322 47px 50px),
-    radial-gradient(circle at 56% 39%,#ff4fc340,transparent 26%),
-    linear-gradient(#1a0a2b,#050611);
-}
-.developerGirl{
-  position:absolute;
-  left:18%;
-  bottom:42px;
-  width:350px;
-  height:550px;
-  z-index:2;
-}
-.hair{
-  position:absolute;
-  left:180px;
-  top:0;
-  width:130px;
-  height:130px;
-  background:#2b120b;
-  border-radius:50%;
-  box-shadow:0 0 0 12px #6b2918;
-}
-.face{
-  position:absolute;
-  left:238px;
-  top:122px;
-  width:74px;
-  height:95px;
-  background:#ba744f;
-  border-radius:50%;
-}
-.hoodie{
-  position:absolute;
-  bottom:0;
-  width:300px;
-  height:405px;
-  background:#070912;
-  border:2px solid #301748;
-  border-radius:110px 110px 30px 30px;
-  color:var(--pink);
-  font-family:cursive;
-  font-size:2.25rem;
-  padding:165px 0 0 70px;
-}
-.laptop{
-  position:absolute;
-  left:50%;
-  bottom:155px;
-  width:320px;
-  height:175px;
-  background:#02050b;
-  border:2px solid #4a5578;
-  border-radius:12px;
-  display:grid;
-  place-items:center;
-  color:var(--pink);
-  font-size:3rem;
-  z-index:3;
-}
-.cup{
-  position:absolute;
-  left:67%;
-  bottom:95px;
-  width:86px;
-  height:132px;
-  border:2px solid var(--pink);
-  border-radius:0 0 18px 18px;
-  text-align:center;
-  font-size:.75rem;
-  display:grid;
-  place-items:center;
-  z-index:3;
-}
+.city{display:none}
+.developerGirl,.laptop,.cup{display:none}
 .thoughtCloud{
   position:absolute;
   top:65px;
-  left:48%;
-  transform:translateX(-15%);
+  left:7%;
   width:455px;
   min-height:230px;
   background:#160821e8;
@@ -157,8 +81,8 @@ button{cursor:pointer}
   border-radius:50%;
   box-shadow:0 0 22px #ff4fc3;
 }
-.thoughtCloud::before{width:44px;height:44px;left:-48px;bottom:45px}
-.thoughtCloud::after{width:22px;height:22px;left:-82px;bottom:28px}
+.thoughtCloud::before{width:44px;height:44px;right:-52px;bottom:44px}
+.thoughtCloud::after{width:22px;height:22px;right:-88px;bottom:25px}
 .thoughtCloud span{font-size:1.6rem}
 .accessBox{
   position:absolute;
@@ -241,11 +165,13 @@ button{cursor:pointer}
 .slide h1,.slide h2,.slide h3{color:var(--pink)}
 .photo{
   width:100%;
-  max-height:430px;
-  object-fit:cover;
-  object-position:center top;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  object-position:center;
   border-radius:16px;
   border:1px solid var(--line);
+  background:#f6eef2;
 }
 .skillsGrid{
   display:grid;
@@ -293,13 +219,27 @@ button{cursor:pointer}
 @media(max-width:900px){
   .nav{flex-wrap:wrap}
   .nav nav{order:3;width:100%;font-size:.9rem}
-  .heroOnly{min-height:760px}
-  .accessBox{right:10px;left:10px;top:12px;width:auto}
-  .developerGirl{left:4%;bottom:22px;transform:scale(.62);transform-origin:bottom left}
-  .laptop{left:43%;bottom:120px;width:170px;height:110px}
-  .cup{left:74%;bottom:72px;width:62px;height:100px;font-size:.6rem}
-  .thoughtCloud{left:58%;top:255px;width:245px;min-height:165px;font-size:.82rem;padding:26px 18px}
-  .thoughtCloud::before{width:26px;height:26px;left:-28px;bottom:40px}
-  .thoughtCloud::after{width:14px;height:14px;left:-48px;bottom:26px}
+  .heroOnly{
+    min-height:760px;
+    background-size:auto 760px;
+    background-position:center top;
+  }
+  .accessBox{
+    right:10px;
+    left:10px;
+    top:12px;
+    width:auto;
+    padding:14px;
+  }
+  .thoughtCloud{
+    left:14px;
+    top:315px;
+    width:280px;
+    min-height:185px;
+    font-size:.88rem;
+    padding:32px 18px;
+  }
+  .thoughtCloud::before{width:28px;height:28px;right:-35px;bottom:38px}
+  .thoughtCloud::after{width:14px;height:14px;right:-58px;bottom:24px}
   .skillsGrid{grid-template-columns:1fr}
 }

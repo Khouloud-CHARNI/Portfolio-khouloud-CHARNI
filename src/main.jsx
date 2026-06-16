@@ -237,8 +237,10 @@ function App() {
 
   function speakSite() {
     if (!window.speechSynthesis) return;
+    const utterance = new SpeechSynthesisUtterance(t.speak);
+    utterance.lang = lang === "ar" ? "ar-SA" : lang === "en" ? "en-GB" : "fr-FR";
     window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(new SpeechSynthesisUtterance(t.speak));
+    window.speechSynthesis.speak(utterance);
   }
 
   function openSlide(name) {
@@ -313,7 +315,7 @@ function App() {
   );
 }
 
-function Slide({ name, t, vote, setVote, showResults, setShowResults }) {
+function Slide({ name, t, lang, vote, setVote, showResults, setShowResults }) {
   if (name === "about") return (
     <>
       <h1>{t.aboutTitle}</h1>
