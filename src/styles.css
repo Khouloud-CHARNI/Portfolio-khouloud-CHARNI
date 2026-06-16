@@ -48,25 +48,163 @@ button{cursor:pointer}
 .home{max-width:1800px;margin:auto;padding:0}
 .heroOnly{
   position:relative;
-  min-height:690px;
+  min-height:720px;
   overflow:hidden;
-  background:#050713 url("/assets/hero-wallpaper.png") center center / cover no-repeat;
+  background:#050713;
   border-bottom:1px solid var(--line);
 }
-.city{display:none}
-.developerGirl,.laptop,.cup{display:none}
+.city{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,#08051f55 0%,#050713 100%),
+    radial-gradient(circle at 67% 42%,#ff4fc340,transparent 22%),
+    linear-gradient(180deg,#170b34,#070717 58%,#02040d);
+}
+.city::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,transparent 0 7%,#0a0f26 7% 9%,transparent 9% 90%,#0a0f26 90% 92%,transparent 92%),
+    repeating-linear-gradient(90deg,transparent 0 44px,#ff4fc320 45px 48px);
+}
+.city::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:120px;
+  height:210px;
+  background:
+    linear-gradient(to top,#060819 0 72%,transparent 72%),
+    repeating-linear-gradient(90deg,#050817 0 42px,#101a3f 43px 45px,#050817 46px 80px),
+    radial-gradient(circle at 72% 15%,#b84dff 0 3px,transparent 4px);
+  box-shadow:0 -70px 120px #8d2cff55;
+  opacity:.95;
+}
+.developerGirl{
+  position:absolute;
+  left:13%;
+  bottom:40px;
+  width:390px;
+  height:560px;
+  z-index:2;
+}
+.hair{
+  position:absolute;
+  left:170px;
+  top:0;
+  width:145px;
+  height:145px;
+  background:#2b120b;
+  border-radius:50%;
+  box-shadow:0 0 0 12px #6b2918, -35px 20px 0 5px #1a0906;
+}
+.face{
+  position:absolute;
+  left:245px;
+  top:130px;
+  width:78px;
+  height:100px;
+  background:#ba744f;
+  border-radius:50%;
+}
+.hoodie{
+  position:absolute;
+  bottom:0;
+  width:330px;
+  height:420px;
+  background:#060914;
+  border:2px solid #301748;
+  border-radius:120px 120px 34px 34px;
+  color:var(--pink);
+  font-family:cursive;
+  font-size:2.25rem;
+  padding:170px 0 0 75px;
+}
+.laptop{
+  position:absolute;
+  left:49%;
+  bottom:170px;
+  width:320px;
+  height:180px;
+  background:#02050b;
+  border:2px solid #4a5578;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  color:var(--pink);
+  font-size:3rem;
+  z-index:3;
+  box-shadow:0 25px 60px #000;
+}
+.cup{
+  position:absolute;
+  left:70%;
+  bottom:92px;
+  width:86px;
+  height:132px;
+  border:2px solid var(--pink);
+  border-radius:0 0 18px 18px;
+  text-align:center;
+  font-size:.75rem;
+  display:grid;
+  place-items:center;
+  z-index:3;
+  background:#050713dd;
+}
+.kpopMascot{
+  position:absolute;
+  right:95px;
+  bottom:155px;
+  z-index:4;
+  width:110px;
+  height:130px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  filter:drop-shadow(0 0 16px #ff55cd);
+}
+.kpopMascot .head{
+  font-size:3.5rem;
+  background:#070817;
+  border:2px solid #ff55cd;
+  width:82px;
+  height:82px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+}
+.kpopMascot .cap{
+  position:absolute;
+  top:0;
+  background:#ff55cd;
+  color:#050713;
+  font-weight:900;
+  font-size:.62rem;
+  padding:4px 8px;
+  border-radius:999px;
+  transform:rotate(-8deg);
+}
+.kpopMascot .lightstick{
+  position:absolute;
+  right:2px;
+  bottom:18px;
+  font-size:1.5rem;
+}
 .thoughtCloud{
   position:absolute;
-  top:65px;
-  left:7%;
+  top:80px;
+  left:45%;
   width:455px;
   min-height:230px;
   background:#160821e8;
   border:4px solid #ff75dc;
-  border-radius:48% 52% 45% 55% / 55% 47% 53% 45%;
+  border-radius:50%;
   box-shadow:0 0 30px #ff4fc3;
   text-align:center;
-  padding:42px 30px;
+  padding:50px 30px;
   font-size:1.45rem;
   color:#ff9ee9;
   font-weight:700;
@@ -81,15 +219,31 @@ button{cursor:pointer}
   border-radius:50%;
   box-shadow:0 0 22px #ff4fc3;
 }
-.thoughtCloud::before{width:44px;height:44px;right:-52px;bottom:44px}
-.thoughtCloud::after{width:22px;height:22px;right:-88px;bottom:25px}
+.thoughtCloud::before{width:42px;height:42px;left:-52px;bottom:52px}
+.thoughtCloud::after{width:22px;height:22px;left:-86px;bottom:32px}
 .thoughtCloud span{font-size:1.6rem}
+.floatingAccessBtn{
+  position:fixed;
+  right:22px;
+  top:130px;
+  width:64px;
+  height:64px;
+  z-index:80;
+  border:2px solid #ff75dc;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:2rem;
+  box-shadow:0 0 22px #ff55cd;
+}
 .accessBox{
-  position:absolute;
-  right:35px;
-  top:35px;
+  position:fixed;
+  right:22px;
+  top:205px;
   width:315px;
-  z-index:6;
+  z-index:79;
   background:linear-gradient(180deg,#0b1024f2,#050817f2);
   border:1px solid #33405c;
   border-radius:16px;
@@ -216,30 +370,60 @@ button{cursor:pointer}
 [dir="rtl"] .slide{border-left:0;border-right:2px solid var(--pink)}
 [dir="rtl"] .overlay{justify-content:flex-start}
 [dir="rtl"] .accessBox button,[dir="rtl"] .accessBox a{text-align:right}
+[dir="rtl"] .floatingAccessBtn{left:22px;right:auto}
+[dir="rtl"] .accessBox{left:22px;right:auto}
 @media(max-width:900px){
   .nav{flex-wrap:wrap}
   .nav nav{order:3;width:100%;font-size:.9rem}
-  .heroOnly{
-    min-height:760px;
-    background-size:auto 760px;
-    background-position:center top;
+  .heroOnly{min-height:760px}
+  .developerGirl{
+    left:3%;
+    bottom:12px;
+    transform:scale(.58);
+    transform-origin:bottom left;
+  }
+  .laptop{
+    left:43%;
+    bottom:115px;
+    width:170px;
+    height:110px;
+    font-size:2rem;
+  }
+  .cup{
+    left:74%;
+    bottom:70px;
+    width:62px;
+    height:100px;
+    font-size:.6rem;
+  }
+  .kpopMascot{
+    right:14px;
+    bottom:155px;
+    transform:scale(.7);
+    transform-origin:bottom right;
+  }
+  .thoughtCloud{
+    left:12px;
+    top:235px;
+    width:285px;
+    min-height:185px;
+    font-size:.88rem;
+    padding:34px 18px;
+  }
+  .thoughtCloud::before{width:28px;height:28px;left:-33px;bottom:42px}
+  .thoughtCloud::after{width:14px;height:14px;left:-56px;bottom:28px}
+  .floatingAccessBtn{
+    right:14px;
+    top:128px;
+    width:56px;
+    height:56px;
+    font-size:1.7rem;
   }
   .accessBox{
     right:10px;
-    left:10px;
-    top:12px;
-    width:auto;
+    top:192px;
+    width:290px;
     padding:14px;
   }
-  .thoughtCloud{
-    left:14px;
-    top:315px;
-    width:280px;
-    min-height:185px;
-    font-size:.88rem;
-    padding:32px 18px;
-  }
-  .thoughtCloud::before{width:28px;height:28px;right:-35px;bottom:38px}
-  .thoughtCloud::after{width:14px;height:14px;right:-58px;bottom:24px}
   .skillsGrid{grid-template-columns:1fr}
 }
