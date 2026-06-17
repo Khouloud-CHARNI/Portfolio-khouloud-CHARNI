@@ -13,8 +13,8 @@ button{cursor:pointer}
 .cvBtn{background:linear-gradient(90deg,var(--pink),var(--purple));border-radius:999px;padding:12px 20px;text-decoration:none;font-weight:700;white-space:nowrap}
 .hero{position:relative;min-height:min(640px,62vw);background:linear-gradient(90deg,#02040d22,#02040d00),url("/assets/fond-personnage-ville-chopper.png") center center / cover no-repeat;overflow:hidden}
 .thoughtTitle{position:absolute;top:6.2%;left:54%;transform:translateX(-50%);width:34%;text-align:center;font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(1.55rem,3.2vw,3.4rem);color:#ffc1f1;text-shadow:0 0 14px #ff55cd;z-index:3}
-.thoughtBubble{position:absolute;top:18.2%;left:54%;transform:translateX(-50%);width:30%;min-height:24%;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#ffb0ef;text-shadow:0 0 8px #ff55cd;font-weight:800;font-size:clamp(.76rem,1.35vw,1.55rem);line-height:1.18;padding:1.4rem;z-index:4;pointer-events:none}
-.thoughtBubble p{margin:.22em 0}
+.thoughtBubble{position:absolute;top:22%;left:54%;transform:translateX(-50%);width:24%;min-height:14%;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#ffb0ef;text-shadow:0 0 8px #ff55cd;font-weight:700;font-size:clamp(.55rem,.9vw,1rem);line-height:1.3;padding:1.4rem;z-index:4;pointer-events:none}
+.thoughtBubble p{margin:.1rem 0}
 .thoughtBubble b{font-size:1.4em}
 .accessFloating{position:fixed;right:22px;top:130px;width:64px;height:64px;border-radius:50%;border:2px solid #ff8be6;background:linear-gradient(135deg,var(--purple),var(--pink));color:white;font-size:2rem;display:grid;place-items:center;box-shadow:0 0 20px #ff55cd;z-index:80}
 .accessPanel{position:fixed;right:22px;top:205px;width:310px;background:linear-gradient(180deg,#0b1024f5,#050817f5);border:1px solid #5b4b77;border-radius:18px;padding:18px;z-index:79;box-shadow:0 20px 60px #000a}
