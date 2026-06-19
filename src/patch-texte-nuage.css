@@ -1,0 +1,70 @@
+/* PATCH : pensée du jour dans le nuage, sans cœur final
+   Remplace uniquement les règles .thoughtTitle et .thoughtBubble.
+   Le texte sera recentré dans le nuage. */
+
+.thoughtTitle{
+  position:absolute;
+  top:5.6%;
+  left:52.5%;
+  transform:translateX(-50%);
+  width:36%;
+  text-align:center;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:clamp(1.65rem,3.1vw,3.15rem);
+  color:#ffc1f1;
+  text-shadow:0 0 14px #ff55cd;
+  z-index:3;
+  pointer-events:none;
+}
+
+.thoughtBubble{
+  position:absolute;
+  top:21.5%;
+  left:52.7%;
+  transform:translateX(-50%);
+  width:25%;
+  min-height:15%;
+  border:0;
+  background:transparent;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#ffb0ef;
+  text-shadow:0 0 8px #ff55cd;
+  font-weight:800;
+  font-size:clamp(.58rem,.98vw,1.05rem);
+  line-height:1.24;
+  padding:0;
+  z-index:4;
+  pointer-events:none;
+}
+
+.thoughtBubble p{
+  margin:.08rem 0;
+}
+
+/* Cache uniquement le petit cœur final du texte, sans toucher au nuage de l'image */
+.thoughtBubble b{
+  display:none;
+}
+
+@media(max-width:900px){
+  .thoughtTitle{
+    top:7%;
+    left:54%;
+    width:300px;
+    font-size:1.55rem;
+  }
+
+  .thoughtBubble{
+    top:19%;
+    left:54%;
+    width:230px;
+    min-height:135px;
+    font-size:.66rem;
+    line-height:1.2;
+    padding:0;
+  }
+}
