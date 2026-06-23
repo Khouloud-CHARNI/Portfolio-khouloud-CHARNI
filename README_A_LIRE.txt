@@ -1,20 +1,21 @@
-RECTIFICATIF STRICT
+CORRECTIF STRICT : PENSÉE DU JOUR + ÉTOILE UNIQUEMENT
 
-Ce correctif ne fait que :
-1. déplacer l’étoile V1 néon plus haut au-dessus de Tony Chopper ;
-2. remplacer exactement "Développeuse Web & Mobile" par "Développeuse Web et Web Mobile" ;
-3. remonter et réduire la pensée du jour pour la faire rentrer dans le nuage.
+Ce correctif ne touche qu'à :
+1. La position et taille du texte de la pensée du jour.
+2. La position de l'étoile V1 néon, encore plus haut au-dessus du renne.
 
-À faire :
+Aucune autre modification.
+
+Étapes :
 1. Dézippe ce dossier.
-2. Mets APPLIQUER_RECTIFICATIF.ps1 dans la racine de ton projet.
-3. Dans PowerShell, lance :
+2. Mets APPLIQUER_PENSEE_ETOILE.ps1 dans la racine de ton projet.
+3. Lance dans PowerShell :
 
-powershell -ExecutionPolicy Bypass -File .\APPLIQUER_RECTIFICATIF.ps1
+powershell -ExecutionPolicy Bypass -File .\APPLIQUER_PENSEE_ETOILE.ps1
 
 Puis :
 
 npm run build
 git add .
-git commit -m "Rectificatif etoile texte nuage"
+git commit -m "Correction pensee du jour et etoile"
 git push origin main

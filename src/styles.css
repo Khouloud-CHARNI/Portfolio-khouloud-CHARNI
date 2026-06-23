@@ -253,3 +253,52 @@ button{cursor:pointer}
 }
 
 /* ===== FIN RECTIFICATIF STRICT ===== */
+
+
+/* ===== CORRECTIF FINAL PENSEE + ETOILE UNIQUEMENT ===== */
+
+/* PensÃ©e du jour : texte rÃ©ellement dans le nuage, plus grand */
+.thoughtBubble{
+  top:12.4% !important;
+  left:34.8% !important;
+  width:31% !important;
+  min-height:16% !important;
+  font-size:clamp(.82rem,1.25vw,1.35rem) !important;
+  line-height:1.18 !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+}
+
+.thoughtBubble p{
+  margin:.08rem 0 !important;
+}
+
+/* Ã‰toile : encore plus haut au-dessus du personnage renne */
+.personalStarZone{
+  position:absolute !important;
+  right:58px !important;
+  bottom:385px !important;
+  z-index:9 !important;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .thoughtBubble{
+    top:12.8% !important;
+    left:35% !important;
+    width:245px !important;
+    min-height:110px !important;
+    font-size:.72rem !important;
+    line-height:1.14 !important;
+  }
+
+  .personalStarZone{
+    right:18px !important;
+    bottom:285px !important;
+  }
+}
+
+/* ===== FIN CORRECTIF FINAL PENSEE + ETOILE UNIQUEMENT ===== */
