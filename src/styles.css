@@ -156,3 +156,51 @@ button{cursor:pointer}
   .starPortal{width:155px;height:155px}
   .starPortal span{font-size:.78rem;max-width:105px}
 }
+
+
+/* CORRECTIONS STRICTES DEMANDÉES */
+/* 1. Retirer le bloc accessibilité affiché sur la photo/écran de la V2 */
+.screenCard{
+  display:none !important;
+}
+
+/* 2. Replacer la pensée du jour DANS le nuage de la V1, sans toucher au reste */
+.thoughtTitle{
+  top:5.8% !important;
+  left:53.2% !important;
+  width:34% !important;
+  font-size:clamp(1.6rem,3vw,3.05rem) !important;
+}
+
+.thoughtBubble{
+  top:23.8% !important;
+  left:55.2% !important;
+  width:23% !important;
+  min-height:13% !important;
+  font-size:clamp(.56rem,.88vw,.95rem) !important;
+  line-height:1.2 !important;
+  padding:0 !important;
+}
+
+.thoughtBubble p{
+  margin:.05rem 0 !important;
+}
+
+/* Mobile : centrage dans le nuage sur téléphone */
+@media(max-width:900px){
+  .thoughtTitle{
+    top:6.8% !important;
+    left:55% !important;
+    width:290px !important;
+    font-size:1.45rem !important;
+  }
+
+  .thoughtBubble{
+    top:21.8% !important;
+    left:56% !important;
+    width:205px !important;
+    min-height:105px !important;
+    font-size:.56rem !important;
+    line-height:1.18 !important;
+  }
+}

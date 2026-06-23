@@ -32,7 +32,7 @@ const T = {
     inclusion: "Chaque personne mérite un accès égal au savoir et à la technologie. Construisons ensemble un avenir inclusif.",
     access: "Accessibilité",
     starText: "Cliquez et découvrez-moi autrement",
-    proTitleSmall: "Développeuse web & mobile en reconversion",
+    proTitleSmall: "Développeuse Web & Mobile en reconversion",
     proTitle: "Construisons ensemble un numérique accessible et inclusif.",
     proIntro: "Passionnée par le code, la créativité et l’humain, je conçois des expériences digitales utiles, performantes et accessibles à tous.",
     proLearn: "En savoir plus sur moi",
@@ -84,7 +84,7 @@ const T = {
     inclusion: "Everyone deserves equal access to knowledge and technology. Let us build an inclusive future together.",
     access: "Accessibility",
     starText: "Click and discover me differently",
-    proTitleSmall: "Web & mobile developer in career transition",
+    proTitleSmall: "Web & Mobile Developer in career transition",
     proTitle: "Let’s build accessible and inclusive digital experiences together.",
     proIntro: "Passionate about code, creativity and people, I design useful, high-performing and accessible digital experiences for everyone.",
     proLearn: "Learn more about me",
@@ -283,16 +283,6 @@ function ProfessionalPortfolio({ t, lang }) {
 
         <section className="proPhotoArea">
           <img src="/assets/photo-khouloud-originale.jpg" alt="Khouloud CHARNI" className="proPhoto" />
-          <div className="screenCard">
-            <h3>{t.screenTitle}</h3>
-            <p>{t.screenText}</p>
-            <div className="screenIcons">
-              <span><FaEye /> Contraste</span>
-              <span><FaHeadphones /> Audio</span>
-              <span><FaTextHeight /> Texte</span>
-              <span><FaBraille /> Braille</span>
-            </div>
-          </div>
         </section>
 
         <aside className="proValues">
@@ -450,10 +440,10 @@ function Slide({ name, t, vote, setVote, showResults, setShowResults }) {
       <img className="photo" src="/assets/photo-khouloud-originale.jpg" alt="Khouloud CHARNI" />
       {t.aboutText.map((p) => <p key={p}>{p}</p>)}
       <ul>
+        <li>2i Academy Lyon – RNCP 5</li>
         <li>AESH depuis septembre 2024</li>
         <li>Bac Littéraire</li>
         <li>Bac Pro ARCU</li>
-        <li>2i Academy Lyon – RNCP 5</li>
       </ul>
     </>
   );
