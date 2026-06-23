@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+﻿import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   FaTimes, FaDownload, FaCode, FaBriefcase, FaGraduationCap, FaUsers, FaHeart,
@@ -517,3 +517,4 @@ function Slide({ name, t, vote, setVote, showResults, setShowResults }) {
 }
 
 createRoot(document.getElementById("root")).render(<App />);
+

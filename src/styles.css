@@ -1,4 +1,4 @@
-*{box-sizing:border-box}
+﻿*{box-sizing:border-box}
 :root{
   --pink:#ff55cd;--purple:#9b43ff;--cyan:#00ead1;--line:#3d2454;
   --cream:#fbf6ef;--sand:#f0dfcf;--taupe:#a8795e;--brown:#8b5d45;--petrol:#174f61;--ink:#182026
@@ -204,3 +204,52 @@ button{cursor:pointer}
     line-height:1.18 !important;
   }
 }
+
+
+/* ===== RECTIFICATIF STRICT : ETOILE + TEXTE + NUAGE ===== */
+
+/* 1. Ã‰toile V1 nÃ©on : plus haut au-dessus de Tony Chopper */
+.personalStarZone{
+  position:absolute !important;
+  right:70px !important;
+  bottom:310px !important;
+  z-index:9 !important;
+}
+
+/* 2. PensÃ©e du jour : beaucoup plus haut, plus petite, dans le nuage */
+.thoughtBubble{
+  top:17.8% !important;
+  left:54.8% !important;
+  width:24% !important;
+  min-height:12% !important;
+  font-size:clamp(.48rem,.74vw,.82rem) !important;
+  line-height:1.16 !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+}
+
+.thoughtBubble p{
+  margin:.03rem 0 !important;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .personalStarZone{
+    right:18px !important;
+    bottom:235px !important;
+  }
+
+  .thoughtBubble{
+    top:16.4% !important;
+    left:55.5% !important;
+    width:190px !important;
+    min-height:88px !important;
+    font-size:.48rem !important;
+    line-height:1.14 !important;
+  }
+}
+
+/* ===== FIN RECTIFICATIF STRICT ===== */
