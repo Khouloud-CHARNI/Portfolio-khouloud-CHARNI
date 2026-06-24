@@ -1,21 +1,27 @@
-À FAIRE
+CORRECTIF DÉFINITIF — 3 POINTS UNIQUEMENT
 
+Ce correctif modifie uniquement :
+1. La pensée du jour pour la remettre dans le nuage.
+2. Le remplacement partout de :
+   "Développeuse Web & Mobile"
+   par :
+   "Développeuse Web et Web Mobile"
+3. La navigation : liens un peu plus bas et suppression visuelle de la barre grise.
+
+À faire :
 1. Dézippe ce dossier.
-2. Mets le fichier CORRECTION_PORTFOLIO.ps1 dans ton dossier :
+2. Mets CORRECTIF_DEFINITIF.ps1 dans :
    C:\Users\khoul\Desktop\Portfolio-Khouloud-CHARNI
 
-Il doit être au même niveau que :
-- package.json
-- src
-- public
+3. Dans PowerShell, lance :
 
-3. Lance dans PowerShell :
-
-powershell -ExecutionPolicy Bypass -File .\CORRECTION_PORTFOLIO.ps1
+powershell -ExecutionPolicy Bypass -File .\CORRECTIF_DEFINITIF.ps1
 
 4. Puis :
 
 npm run build
 git add .
-git commit -m "Correction finale nuage nav web mobile"
+git commit -m "Correctif definitif nuage nav web mobile"
 git push origin main
+
+Après redéploiement Vercel, fais Ctrl + F5.

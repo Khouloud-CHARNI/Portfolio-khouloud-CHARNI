@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "portfolio-khouloud-charni",
   "private": true,
   "version": "1.0.0",
@@ -17,3 +17,4 @@
     "react-icons": "^5.5.0"
   }
 }
+

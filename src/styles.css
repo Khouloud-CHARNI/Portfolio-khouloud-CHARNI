@@ -468,3 +468,91 @@ button{cursor:pointer}
 }
 
 /* ===== FIN CORRECTION FINALE STRICTE ===== */
+
+
+
+/* ===== CORRECTIF DEFINITIF 3 POINTS ===== */
+
+/* 1) PensÃ©e du jour : texte DANS le nuage */
+.thoughtTitle{
+  top:8.6% !important;
+  left:61.8% !important;
+  width:38% !important;
+  transform:translateX(-50%) !important;
+  text-align:center !important;
+}
+
+.thoughtBubble{
+  top:20.6% !important;
+  left:61.8% !important;
+  width:29% !important;
+  min-height:10% !important;
+  transform:translateX(-50%) !important;
+  padding:0 !important;
+  font-size:clamp(.68rem,1.02vw,1.12rem) !important;
+  line-height:1.12 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  z-index:5 !important;
+}
+
+.thoughtBubble p{
+  margin:0 !important;
+}
+
+/* 2) Navigation : liens plus bas + plus de barre grise visible */
+.proNav,
+.navBar{
+  min-height:96px !important;
+  padding-top:22px !important;
+  padding-bottom:14px !important;
+  align-items:center !important;
+  overflow:hidden !important;
+}
+
+.proNav nav,
+.navBar nav{
+  padding-top:16px !important;
+  align-items:center !important;
+  overflow-x:auto !important;
+  scrollbar-width:none !important;
+}
+
+.proNav nav::-webkit-scrollbar,
+.navBar nav::-webkit-scrollbar{
+  display:none !important;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .thoughtTitle{
+    top:8.5% !important;
+    left:61.5% !important;
+    width:260px !important;
+  }
+
+  .thoughtBubble{
+    top:19.8% !important;
+    left:61.5% !important;
+    width:205px !important;
+    min-height:78px !important;
+    font-size:.58rem !important;
+    line-height:1.1 !important;
+  }
+
+  .proNav,
+  .navBar{
+    min-height:90px !important;
+    padding-top:18px !important;
+    padding-bottom:12px !important;
+  }
+
+  .proNav nav,
+  .navBar nav{
+    padding-top:12px !important;
+  }
+}
+
+/* ===== FIN CORRECTIF DEFINITIF 3 POINTS ===== */

@@ -1,4 +1,4 @@
-# Portfolio-Khouloud-CHARNI
+﻿# Portfolio-Khouloud-CHARNI
 
 Projet React + Vite prêt pour VS Code, GitHub et Vercel.
 
@@ -36,3 +36,4 @@ Ne modifie pas `package.json` à la main si ce n'est pas nécessaire.
 - Favicon/avatar : `public/favicon.png`
 - CV : `public/documents/CV-Khouloud-CHARNI-Alternance.pdf`
 - Lettre : `public/documents/Lettre-Motivation-Khouloud-CHARNI.pdf`
+
