@@ -306,3 +306,75 @@ button{cursor:pointer}
 /* ===== FIN CORRECTIF FINAL PENSEE + ETOILE UNIQUEMENT ===== */
 
 
+
+
+/* ===== CORRECTION STRICTE NUAGE WEBMOBILE NAV ===== */
+
+/* PensÃ©e du jour : replacÃ©e dans le nuage visible sur ordinateur */
+.thoughtTitle{
+  top:9.2% !important;
+  left:60.5% !important;
+  width:38% !important;
+  font-size:clamp(1.8rem,3.4vw,3.7rem) !important;
+  text-align:center !important;
+}
+
+.thoughtBubble{
+  top:30.5% !important;
+  left:60.5% !important;
+  width:31% !important;
+  min-height:13% !important;
+  font-size:clamp(.78rem,1.18vw,1.32rem) !important;
+  line-height:1.18 !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+}
+
+.thoughtBubble p{
+  margin:.05rem 0 !important;
+}
+
+/* Barre de navigation : un peu plus basse et lisible */
+.proNav,
+.navBar{
+  padding-top:18px !important;
+  padding-bottom:14px !important;
+  min-height:92px !important;
+  align-items:center !important;
+}
+
+.proNav nav,
+.navBar nav{
+  padding-top:8px !important;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .thoughtTitle{
+    top:8.8% !important;
+    left:59.5% !important;
+    width:280px !important;
+    font-size:1.55rem !important;
+  }
+
+  .thoughtBubble{
+    top:28.5% !important;
+    left:59.5% !important;
+    width:215px !important;
+    min-height:92px !important;
+    font-size:.62rem !important;
+    line-height:1.14 !important;
+  }
+
+  .proNav,
+  .navBar{
+    min-height:86px !important;
+    padding-top:14px !important;
+    padding-bottom:12px !important;
+  }
+}
+
+/* ===== FIN CORRECTION STRICTE NUAGE WEBMOBILE NAV ===== */
