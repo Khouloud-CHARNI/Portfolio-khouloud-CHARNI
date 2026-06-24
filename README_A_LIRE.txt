@@ -1,23 +1,21 @@
-CORRECTION STRICTE
+À FAIRE
 
-Ce correctif ne modifie que :
-1. La pensée du jour pour la remettre dans le nuage.
-2. Tous les textes "Développeuse Web & Mobile" vers "Développeuse Web et Web Mobile".
-3. La barre de navigation, légèrement plus basse.
-
-À faire :
 1. Dézippe ce dossier.
-2. Copie APPLIQUER_CORRECTION_STRICTE.ps1 dans la racine de ton projet :
+2. Mets le fichier CORRECTION_PORTFOLIO.ps1 dans ton dossier :
    C:\Users\khoul\Desktop\Portfolio-Khouloud-CHARNI
-3. Dans PowerShell, lance :
 
-powershell -ExecutionPolicy Bypass -File .\APPLIQUER_CORRECTION_STRICTE.ps1
+Il doit être au même niveau que :
+- package.json
+- src
+- public
 
-Puis :
+3. Lance dans PowerShell :
+
+powershell -ExecutionPolicy Bypass -File .\CORRECTION_PORTFOLIO.ps1
+
+4. Puis :
 
 npm run build
 git add .
-git commit -m "Correction nuage web mobile navigation"
+git commit -m "Correction finale nuage nav web mobile"
 git push origin main
-
-Après Vercel : Ctrl + F5.

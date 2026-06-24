@@ -519,3 +519,4 @@ function Slide({ name, t, vote, setVote, showResults, setShowResults }) {
 createRoot(document.getElementById("root")).render(<App />);
 
 
+

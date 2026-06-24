@@ -1,4 +1,4 @@
-/* PATCH : pensée du jour dans le nuage, sans cœur final
+﻿/* PATCH : pensée du jour dans le nuage, sans cœur final
    Remplace uniquement les règles .thoughtTitle et .thoughtBubble.
    Le texte sera recentré dans le nuage. */
 
@@ -68,3 +68,4 @@
     padding:0;
   }
 }
+
