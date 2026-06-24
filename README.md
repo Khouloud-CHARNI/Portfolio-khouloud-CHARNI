@@ -37,3 +37,4 @@ Ne modifie pas `package.json` à la main si ce n'est pas nécessaire.
 - CV : `public/documents/CV-Khouloud-CHARNI-Alternance.pdf`
 - Lettre : `public/documents/Lettre-Motivation-Khouloud-CHARNI.pdf`
 
+
