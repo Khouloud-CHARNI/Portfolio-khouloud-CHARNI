@@ -1,0 +1,3 @@
+Copie REPARATION_BUILD_VITE.ps1 à la racine du projet puis lance :
+powershell -ExecutionPolicy Bypass -File .\REPARATION_BUILD_VITE.ps1
+Ensuite : npm run build
